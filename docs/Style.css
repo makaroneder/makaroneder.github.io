@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+}
+.rectangle {
+    position: absolute;
+    z-index: 0;
+    background-color: var(--color);
+    width: var(--w);
+    height: var(--h);
+    left: var(--x);
+    top: var(--y);
+}
+.star {
+    position: absolute;
+    z-index: -1;
+    animation-name: starAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--duration);
+    animation-delay: var(--delay);
+}
+@keyframes starAnimation {
+    from {
+        background-color: var(--color1);
+        width: var(--width1);
+        height: var(--height1);
+        left: var(--x1);
+        top: var(--y1);
+        rotate: var(--rotation1);
+        border-radius: var(--circleness1);
+    }
+    to {
+        background-color: var(--color2);
+        width: var(--width2);
+        height: var(--height2);
+        left: var(--x2);
+        top: var(--y2);
+        rotate: var(--rotation2);
+        border-radius: var(--circleness2);
+    }
+}
